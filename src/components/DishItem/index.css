@@ -1,0 +1,144 @@
+.dish-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px 4px 4px #3b3938;
+  padding: 12px;
+  margin: 12px;
+}
+
+@media (max-width: 768px) {
+  .dish-container {
+    flex-direction: column;
+  }
+}
+
+.dish-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .dish-inner-container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.dish-name {
+  color: black;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .dish-name {
+    width: 200px;
+    font-size: 28px;
+  }
+}
+
+.calories {
+  color: #f78c0a;
+  font-size: 24px;
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
+.dish-desc {
+  color: #91867e;
+  font-size: 24px;
+  font-family: 'Roboto';
+  font-weight: 600;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .dish-desc {
+    width: 200px;
+    font-size: 20px;
+  }
+}
+
+.currency-price {
+  color: #3b3938;
+  font-size: 24px;
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
+.dish-image {
+  width: 200px;
+  height: 200px;
+}
+
+.button-container {
+  background-color: #5fe620;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.button {
+  background-color: transparent;
+  font-size: 50px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.notavailable-class {
+  color: red;
+  font-size: 12px;
+  font-family: 'Roboto';
+}
+
+.custom-class {
+  color: blue;
+  font-size: 12px;
+  font-family: 'Roboto';
+}
+
+.veg-class {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: green;
+  border: 0px;
+}
+
+.nonveg-class {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: red;
+  border: 0px;
+}
+
+.veg-border {
+  height: 60px;
+  width: 60px;
+  border: 1px solid green;
+  background-color: transparent;
+}
+
+.nonveg-border {
+  height: 60px;
+  width: 60px;
+  border: 1px solid red;
+  background-color: transparent;
+}
+
+.veg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
