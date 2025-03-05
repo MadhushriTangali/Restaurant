@@ -8,3 +8,17 @@
   font-weight: 800;
   margin: 12px;
 }
+
+.tab {
+  margin: 12px;
+}
+
+.active-tab {
+  background-color: orange;
+  text-decoration: underline;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+}

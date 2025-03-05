@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Loader from 'react-loader-spinner'
 import DishItem from '../DishItem'
 import Header from '../Header'
+import './index.css'
 
 const Restaurant = () => {
   const [loading, setLoading] = useState(true)
@@ -73,13 +74,13 @@ const Restaurant = () => {
 
   useEffect(() => {
     fetchDishesList()
-  })
+  }, [])
 
   const onUpdateTab = id => {
     setActiveTab(id)
   }
 
-  const renderMenuList = () => {
+  const renderMenuList = () =>
     dishList.map(each => {
       const onClickTab = () => onUpdateTab(each.menuCategoryId)
       return (
@@ -88,14 +89,14 @@ const Restaurant = () => {
           className={`tab ${
             each.menuCategoryId === activeTab ? 'active-tab' : ''
           }`}
+          onClick={onClickTab}
         >
-          <button type="button" className="tab-button" onClick={onClickTab}>
+          <button type="button" className="tab-button">
             {each.menuCategory}
           </button>
         </li>
       )
     })
-  }
 
   const renderDishes = () => {
     const {categoryDishes} = dishList.find(
@@ -123,7 +124,7 @@ const Restaurant = () => {
       ) : (
         <div>
           <Header items={items} />
-          <ul>{renderMenuList()}</ul>
+          <ul className="menu-list">{renderMenuList()}</ul>
           {renderDishes()}
         </div>
       )}

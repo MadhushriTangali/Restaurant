@@ -35,7 +35,7 @@ const DishItem = ({dish, items, addItem, removeItem}) => {
   )
 
   return (
-    <div className="dish-container">
+    <li className="dish-container">
       <div className={`veg ${dishType === 2 ? 'veg-border' : 'nonveg-border'}`}>
         <div className={`${dishType === 2 ? 'veg-class' : 'nonveg-class'}`} />
       </div>
@@ -55,7 +55,7 @@ const DishItem = ({dish, items, addItem, removeItem}) => {
       </div>
       <p className="calories">{dishCalories} calories</p>
       <img src={dishImage} alt={dishName} className="dish-image" />
-    </div>
+    </li>
   )
 }
 
